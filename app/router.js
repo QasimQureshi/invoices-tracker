@@ -6,6 +6,12 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
+EmberRouter.IndexRoute = EmberRouter.extend({
+  redirect: function() {
+    return this.transitionTo('invoices');
+  }
+});
+
 Router.map(function() {
   this.route('invoices');
 });
