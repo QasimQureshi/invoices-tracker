@@ -62,7 +62,7 @@
 	<option value="2020">2020</option>
 </select>
 
-<button type="submit">Save Invoice</button>
+<button {{action "addInvoice"}}>Save Invoice</button>
 <ul>
 	{{#each this.model as |invoice|}}
 		<Invoice @amount={{invoice.amount}} @date={{invoice.date}} />
